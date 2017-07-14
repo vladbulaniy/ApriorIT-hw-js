@@ -38,7 +38,7 @@ function Lib() {
     }
   } //toNumber
 
-  this.qrt = function (n) {
+  this.qrt =  (n) => {
     if (!isNaN(n) && n !== Infinity && typeof n !== 'string') {
       return Math.pow(n, 2);
     } else {
@@ -61,7 +61,7 @@ function Lib() {
       console.log("Sorry, this can't number");
       return
     }
-    function CheckArr(arr) {
+    let CheckArr = (arr) => {
       let indicator = true;
       arr.forEach(function (el) {
         if (typeof el !== 'number')
@@ -70,7 +70,7 @@ function Lib() {
       return indicator;
     }
 
-    function handle(arr) {
+    let handle = (arr) => {
       let outArr = [];
       arr.forEach(function (el) {
         if (el % 2 == 0) {
